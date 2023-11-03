@@ -1,0 +1,169 @@
+
+:root{
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --fondo: #F3EAE3;
+    --white: hsl(0, 0%, 100%);
+    $monserrat: 'Montserrat';
+    $frances: 'Fraunces'
+}
+html{
+      box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+   background-color: var(--Cream);
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    background-color:var(--white);  
+    width: 620px;
+    height: 450px; 
+    border-radius:16px;
+    overflow:hidden;
+
+    &-conteimg{
+        background-size:cover;
+        width: 190%;
+        background-image: url(../images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+
+
+    &-body{
+        top:25px;
+        position:relative;
+        display:flex;
+       
+        margin:48px;
+        flex-direction: column;
+        font-size: 14px;
+        font-family: 'Montserrat', serif;
+        
+       
+
+        &-articulo{
+            margin-top: -33px;
+        }
+        &-title{
+            position: absolute;
+            top:-17px;
+            font-family: 'Fraunces',serif;
+            font-size:20px;
+            line-height:23px;
+            width: 80%;
+        
+          
+
+        }
+        &-text{
+            margin-top: 68px;
+            font-size:14px;
+            word-spacing:0.25rem;
+            line-height:23px;
+          
+           
+        }
+
+        &-precio{
+            
+            margin-top:15px;
+            font-size:25px;
+            color: var(--Dark_cyan);
+            font-weight: bold;
+            display:flex;
+            align-items: center;
+            gap: 20px;
+         
+
+            &-tacha{
+                font-size:15px;
+                color:#97969E;
+                text-decoration:line-through;
+            }
+
+        }
+
+        button {
+            margin-top:-30px;
+            background-color: var(--Dark_cyan);
+            border:none;
+            color: var(--white);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height:40px;
+            border-radius:8px;
+        }
+    }
+
+}
+
+@media (max-width: 632px){
+    .card{
+        width: 335px;
+        height: 550px;
+        flex-direction: column;
+
+        &-conteimg{
+            
+            background-size:cover;
+            width:335px;
+            height:221px;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-image: url(../images/image-product-mobile.jpg);
+        }
+
+        &-body{
+            top: 28px;
+            margin:26px;
+        
+            &-articulo{
+        
+            }
+            &-title{
+             top:-25px;
+            
+
+            }
+            &-text{
+                margin-top: 50px;
+            }
+
+            &-precio{
+                margin-top:0px;
+
+                &-tacha{
+                    
+                }
+
+            }
+        }
+
+        button {
+              margin-top:-45px;
+        }
+    }
+}
+
+
+
+
+
